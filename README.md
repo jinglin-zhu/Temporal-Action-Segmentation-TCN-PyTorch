@@ -32,15 +32,18 @@ cd Temporal-Action-Segmentation-TCN-PyTorch
 ## Repository Structure
 
 ```text
-├── dataset.py          # Custom PyTorch Dataset with temporal sequence padding (collate_fn)
-├── model.py            # Complete implementations of Single-Stage, Multi-Stage, and Multi-Scale TCNs
-├── main.py             # Unified entry point for training and predicting across different tasks
-├── eval.py             # Script to evaluate model performance on test set
-├── metrics.py          # Metric calculations (Mean of Frames, Segmental Edit Distance, Segmental F1@10,25,50)
-└── README.md           # Documentation
+├── dataset.py            # Custom PyTorch Dataset with temporal sequence padding (collate_fn)
+├── model.py              # Complete implementations of Single-Stage, Multi-Stage, and Multi-Scale TCNs
+├── main.py               # Unified training, predicting, and task-routing CLI script
+├── eval.py               # [Provided by Course Staff] Evaluation logic linking predictions to ground truth
+├── metrics.py            # [Provided by Course Staff] Metric calculations (MoF, Edit, F1@10,25,50)
+├── data/                 # (Excl. datasets) Holds dataset bundles and class mapping
+└── README.md
 ```
 
-*Note: The actual dataset folder (e.g. `data/`) contains heavy feature directories and is excluded from version control.*
+*Note: 
+The actual dataset folder (e.g. `data/`) contains heavy feature directories and is excluded from version control. 
+`eval.py` and `metrics.py` were provided as part of the course template. These files were completed and adapted to resolve library compatibility issues (such as NumPy deprecations).*
 
 ---
 
